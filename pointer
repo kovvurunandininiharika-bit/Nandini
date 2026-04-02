@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main()
+{
+    int arr[5] = {10, 20, 30, 40, 50};
+    int *ptr;
+    int i;
+
+    ptr = arr;   // pointer pointing to first element of array
+
+    printf("Demonstration of Pointer Arithmetic:\n");
+
+    for(i = 0; i < 5; i++)
+    {
+        printf("Value = %d, Address = %p\n", *ptr, ptr);
+        ptr++;   // increment pointer
+    }
+
+    return 0;
+}
