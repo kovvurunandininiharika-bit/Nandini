@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <string.h>   // for strcpy()
 
 // Define the structure
 struct Student {
@@ -11,12 +12,12 @@ int main() {
     // Declare structure variable
     struct Student s1;
 
-    // Assign values
+    // Assign values to members
     s1.id = 101;
     strcpy(s1.name, "Ravi");
     s1.marks = 89.5;
 
-    // Access and display values
+    // Display values
     printf("Student Details:\n");
     printf("ID: %d\n", s1.id);
     printf("Name: %s\n", s1.name);
