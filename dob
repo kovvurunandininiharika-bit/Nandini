@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+// Define inner structure
+struct Date {
+    int day;
+    int month;
+    int year;
+};
+
+// Define outer structure (nested structure)
+struct Student {
+    int id;
+    char name[50];
+    struct Date dob;   // Nested structure
+};
+
+int main() {
+    // Declare structure variable
+    struct Student s1;
+
+    // Assign values
+    s1.id = 101;
+    sprintf(s1.name, "Ravi");
+    s1.dob.day = 15;
+    s1.dob.month = 8;
+    s1.dob.year = 2005;
+
+    // Display values
+    printf("Student Details:\n");
+    printf("ID: %d\n", s1.id);
+    printf("Name: %s\n", s1.name);
+    printf("Date of Birth: %d-%d-%d\n", s1.dob.day, s1.dob.month, s1.dob.year);
+
+    return 0;
+}
